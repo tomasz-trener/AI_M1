@@ -14,7 +14,7 @@ namespace P06DocumentIntelligence
 
             DocumentAnalysisClient client = new DocumentAnalysisClient(new Uri(endpoint), new AzureKeyCredential(key));
 
-             Uri documentUri = new Uri("https://tomaszles.pl/pliki/pdf_sample.pdf");
+             Uri documentUri = new Uri("https://tomaszles.pl/files/pdf_sample.pdf");
 
             AnalyzeDocumentOperation operation = await client.AnalyzeDocumentFromUriAsync(WaitUntil.Completed, "prebuilt-read",
             documentUri);
